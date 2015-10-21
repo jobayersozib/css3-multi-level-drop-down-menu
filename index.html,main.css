@@ -1,0 +1,262 @@
+//html start here
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Multi Level Drop Down</title>
+        <meta charset="UTF-8">
+        <link type="text/css" rel="stylesheet" href="main.css">
+              
+    </head>
+    <body>
+       
+        <div id="nav">
+            <ul class="list">
+               <li class="list-item"><a href="#">Menu Item Level One </a>
+                    <ul class="sublist">
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a>
+                            <ul class="sublist">
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                            </ul>
+                        </li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                    </ul>
+               </li>
+               <li class="list-item"><a href="#">Menu Item Level One </a>
+                   <ul class="sublist">
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a>
+                            <ul class="sublist">
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                            </ul>
+                        </li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                    </ul>
+               
+               </li>
+               <li class="list-item"><a href="#">Menu Item Level One </a>
+                   <ul class="sublist">
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a>
+                            <ul class="sublist">
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a>
+                                    <ul class="sublist">
+                                <li class="sublist-item"><a href="#">Menu Item Level Four</a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Four </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Four </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Four </a></li>
+                            </ul>
+                                
+                                </li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                            </ul>
+                        </li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a>
+                            <ul class="sublist">
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                                <li class="sublist-item"><a href="#">Menu Item Level Three </a></li>
+                            </ul>
+                        </li>
+                        <li class="sublist-item"><a href="#">Menu Item Level Two </a></li>
+                    </ul>
+               
+               </li>
+               <li class="list-item"><a href="#">Menu Item Level One </a></li>
+            </ul>
+        </div>
+        
+        
+       
+       
+    </body>
+</html>
+
+
+
+
+
+//html end here
+
+
+
+
+//css  start here
+
+/*----------Animation Code Start------*/
+@keyframes example{
+    from{opacity:0;}
+    to{opacity:1}
+}
+@-moz-keyframes example{
+    from{opacity:0;}
+    to{opacity:1}
+}
+@-webkit-keyframes example{
+    from{opacity:0;}
+    to{opacity:1}
+}
+@-o-keyframes example{
+    from{opacity:0;}
+    to{opacity:1}
+}
+@-ms-keyframes example{
+    from{opacity:0;}
+    to{opacity:1}
+}
+/*----------Animation Code End------*/
+
+
+/*----------Reset Code Start------*/
+body,li,ul,div,a,p,h1,h2,h3{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+    text-decoration: none;
+    
+}
+/*----------Reset Code End------*/
+
+/*----------Nav Div style Start------*/
+#nav{
+    background-color:darkslategray;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+  
+   
+    
+    
+}
+/*----------Nav Div style End------*/
+
+
+/*----------Link inside Nav style Start------*/
+#nav a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+}
+/*----------Link inside Nav style End------*/
+
+/*---------- list-item style start------*/
+#nav .list .list-item{
+    padding: 5px;
+    display: inline-table;
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+    padding-left:7px;
+    padding-right: 3px;
+    margin-left: 10px;
+    
+}
+
+
+
+#nav .list .list-item:hover{
+    background-color: brown;
+    border-radius: 7px 3px;
+    
+    
+}
+
+/*---------- list-item style End------*/
+
+
+/*---------- sublist style Start------*/
+#nav .sublist{
+    
+    display: none;
+    padding-top: 5px;
+    background-color: darkolivegreen;
+}
+
+
+#nav .list .list-item:hover > .sublist{
+    display: block;
+    position: absolute;
+     -moz-animation-name: example;
+    
+    -moz-animation-duration: 3s;
+     -o-animation-name: example;
+    
+    -o-animation-duration: 3s;
+     -ms-animation-name: example;
+    
+    -ms-animation-duration: 3s;
+     -webkit-animation-name: example;
+    
+    -webkit-animation-duration: 3s;
+    animation-name: example;
+    
+    animation-duration: 3s;
+    
+    top: 100%;
+    left: 0%;
+    z-index: 1;
+    list-style: none;
+    
+}
+/*---------- sublist style End------*/
+
+
+/*---------- sublist-item style Start------*/
+#nav .sublist .sublist-item{
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: nowrap;
+    position: relative;
+}
+
+#nav .sublist .sublist-item:hover{
+    background-color: burlywood;
+}
+/*---------- sublist-item style End------*/
+
+
+
+/*----- SublistItem inside SublistItem Start-------- */
+#nav .sublist-item > .sublist{
+    list-style: none;
+}
+#nav .sublist-item:hover > .sublist{
+     animation-name: example;
+     -moz-animation-name: example;
+    
+    -moz-animation-duration: 3s;
+     -o-animation-name: example;
+    
+    -o-animation-duration: 3s;
+     -ms-animation-name: example;
+    
+    -ms-animation-duration: 3s;
+     -webkit-animation-name: example;
+    
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    display: inline-table;
+    position: absolute;
+    left: 100%;
+    top: 0%;
+}
+
+/*----- SublistItem inside SublistItem End-------- */
+
+
+//css end here
